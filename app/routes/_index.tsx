@@ -1,4 +1,5 @@
 import type { V2_MetaFunction } from "@remix-run/node";
+import Task from "~/components/Task";
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -9,41 +10,16 @@ export const meta: V2_MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div
-      style={{
-        fontFamily: "system-ui, sans-serif",
-        lineHeight: "1.8",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-      }}
-    >
-      <h1 className="text-3xl font-bold underline">Мишане - 10 лет</h1>
-      <ul>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/blog"
-            rel="noreferrer"
-          >
-            15m Quickstart Blog Tutorial
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/jokes"
-            rel="noreferrer"
-          >
-            Deep Dive Jokes App Tutorial
-          </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://remix.run/docs" rel="noreferrer">
-            Remix Docs
-          </a>
-        </li>
-      </ul>
+    <div className="flex flex-col items-center justify-center">
+      <h1 className="text-5xl font-bold underline">Мишане - 10 лет</h1>
+      <p className="text-2xl font-bold">(люмик-челлендж)</p>
+      <div className="flex flex-row items-center justify-around grow">
+        <Task idx={1} price={200} answer="10" />
+        <Task idx={2} price={70} answer="20" />
+        <Task idx={3} price={450} answer="5" />
+        <Task idx={4} price={140} answer="50" />
+        <Task idx={5} price={340} answer="15" />
+      </div>
     </div>
   );
 }
