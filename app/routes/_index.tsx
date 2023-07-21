@@ -6,8 +6,8 @@ import { tasks } from "~/components/tasks";
 
 export const meta: V2_MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "Mihas Quest" },
+    { name: "description", content: "Birthday quest" },
   ];
 };
 
